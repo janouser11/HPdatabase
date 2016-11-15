@@ -39,6 +39,13 @@ CREATE TABLE HP_SCHOOL
         Primary Key    (School_Name)
     );
 
+NSERT INTO HP_SCHOOL (School_Name, School_Number_Of_Houses, School_Region)
+    VALUES ('Hogwarts', 4, 'United Kingdom');
+NSERT INTO HP_SCHOOL (School_Name, School_Number_Of_Houses, School_Region)
+    VALUES ('Durmstrang', 1, 'Eastern Europe');
+NSERT INTO HP_SCHOOL (School_Name, School_Number_Of_Houses, School_Region)
+    VALUES ('Beauxbatons', 1, 'France');
+
 CREATE TABLE HP_HOUSE
       (House_Name             VARCHAR(50)     NOT NULL,
       House_Symbol             VARCHAR(50),
@@ -357,3 +364,19 @@ CREATE TABLE HP_GROUP_WIZARD_AFFILIATION
       Constraint HP_GROUP_WIZARD_AFFIL_FK2 Foreign Key (Wizard_Name)
           References HP_WIZARD (Wizard_Name)
       );
+
+INSERT INTO HP_SCHOOL (School_Name, School_Number_Of_Houses, School_Region)
+    VALUES ('Hogwarts', 4, 'United Kingdom');
+INSERT INTO HP_CHARACTER (Character_Name, Character_Level_Of_Impact, Character_Human, Character_Creature, School_Name_Visited)
+    VALUES('Harry Potter', 'All Books', 'Y', 'N', 'Hogwarts');
+
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (1, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (2, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (3, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (4, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (5, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (6, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (7, 'Harry Potter');
+      INSERT INTO HP_MOVIE_APPEARED_IN VALUES (8, 'Harry Potter');
+
+select * from HP_CHARACTER;​
